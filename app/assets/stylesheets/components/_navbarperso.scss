@@ -1,0 +1,20 @@
+.navbar-perso {
+  background-color: #136872;
+  font-size: 18px;
+}
+.navbar-perso ul {
+  margin: 0;
+  padding: 0;
+}
+.navbar-perso ul li {
+  list-style: none;
+  width: 170px;
+  height: 48px;
+  border-top: solid 1px grey;
+  text-align: center;
+  line-height: 48px;
+}
+.navbar-perso ul li:hover {
+  background-color: white;
+}
+
