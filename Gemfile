@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'httparty'
 gem 'rest-client'
 
+gem 'figaro'
+
 
 gem "bootstrap-sass"
 
