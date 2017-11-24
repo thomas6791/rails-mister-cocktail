@@ -7,10 +7,17 @@
   position: relative;
   border: solid;
   opacity: 0.7;
-  background-image: url('https://i1.wp.com/www.mojito-bar.fr/wp-content/uploads/2014/10/cosmopolitan.jpg?fit=600%2C600');
+  background-image: url('http://lorempixel.com/output/food-q-c-640-480-7.jpg');
+  position: relative;
 }
 .card:hover {
   opacity: 1;
+}
+
+.card i {
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
 .card-user {
   position: absolute;
