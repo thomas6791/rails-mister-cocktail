@@ -1,12 +1,25 @@
 
 <div class="container">
   <div class="row">
+
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-4 text-center">
-        <div class="card">
-          <h3><%= cocktail.name %></h3>
+        <% if cocktail.photo.url %>
+        <div class="card"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path cocktail.photo, height: 169, width: 354, crop: :fill %>')">
+            <h3><%= cocktail.name %></h3>
         </div>
-      </div>
+        <% else %>
+          <div class="card">
+            <%= cl_image_tag cocktail.photo, height: 169, width: 354, crop: :fill %>
+            <h3><%= cocktail.name %></h3>
+          </div>
+        <% end %>
+    </div>
     <% end %>
   </div>
 </div>
+
+
+

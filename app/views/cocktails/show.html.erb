@@ -3,14 +3,20 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-offset-4 col-xs-4 text-center">
+      <%= cl_image_tag @cocktail.photo, height: 169, width: 354, crop: :fill %>
       <% @cocktail.doses.each do |dose| %>
       <p><%= dose.description %></p>
       <p><%= dose.ingredient.name %></p>
-      <%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
+
+
+      <%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"%>
+
       <% end %>
     </div>
+    <%= link_to "Ajouter une nouvelle dose", new_cocktail_dose_path(@cocktail), class: "btn btn-info" %>
+     <%= link_to "Retour a l'accueil", cocktails_path, class: "btn btn-primary" %>
   </div>
 </div>
 
 
-<%= link_to "Retour a l'accueil", cocktails_path, class: "btn btn-primary" %>
+
