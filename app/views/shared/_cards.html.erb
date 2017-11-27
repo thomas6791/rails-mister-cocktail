@@ -2,16 +2,18 @@
 <div class="container">
   <div class="row">
 
-
+    <% @cocktails.each do |cocktail| %>
       <div class="col-xs-4 text-center">
 
         <% if cocktail.photo.url %>
-        <div class="bangkok">
+        <div class="test">
         <div class="card"
         style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+         url('<%= cl_image_path cocktail.photo.path, height: 300, width: 400, crop: :fill %>')">
          <h3><%= cocktail.name %></h3>
-         <%= link_to "cherry" , cocktail_path(cocktail), class: "card-link" %>
+         <%= link_to "" , cocktail_path(cocktail), class: "card-link" %>
+
+
 
         </div>
 
@@ -22,12 +24,12 @@
       </div>
 
         <% else %>
-        <div class="bangkok">
+        <div class="test">
           <div class="card">
             <%= link_to "" , cocktail_path(cocktail), class: "card-link" %>
-            <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill %>
+            <%= cl_image_tag cocktail.photo.path, height: 300, width: 400, crop: :fill %>
             <h3><%= cocktail.name %></h3>
-            <%= link_to "cherry" , cocktail_path(cocktail), class: "card-link" %>
+            <%= link_to "" , cocktail_path(cocktail), class: "card-link" %>
           </div>
 
           <%= link_to "See details" , cocktail_path(cocktail), class: "index btn btn-success" %>
@@ -37,7 +39,7 @@
 
         <% end %>
     </div>
-
+    <% end %>
   </div>
 </div>
 
