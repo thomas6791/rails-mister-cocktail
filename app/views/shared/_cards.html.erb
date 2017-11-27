@@ -8,14 +8,16 @@
         <% if cocktail.photo.url %>
         <div class="bangkok">
         <div class="card"
-        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+
          <h3><%= cocktail.name %></h3>
          <%= link_to "cherry" , cocktail_path(cocktail), class: "card-link" %>
 
         </div>
 
+        <%= link_to "See details" , cocktail_path(cocktail), class: "index btn btn-success" %>
+        <%= link_to "Custom cocktail" , new_cocktail_dose_path(cocktail), class: "index btn btn-info" %>
 
+        <%= link_to "delete", cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" }, class: "index btn btn-danger"%>
       </div>
 
         <% else %>
@@ -27,7 +29,9 @@
             <%= link_to "cherry" , cocktail_path(cocktail), class: "card-link" %>
           </div>
 
-
+          <%= link_to "See details" , cocktail_path(cocktail), class: "index btn btn-success" %>
+          <%= link_to "Custom cocktail" , new_cocktail_dose_path(cocktail), class: "indexbtn btn-info" %>
+          <%= link_to "delete", cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" }, class: "index btn btn-danger"%>
         </div>
 
         <% end %>
