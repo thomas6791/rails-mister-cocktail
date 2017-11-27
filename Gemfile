@@ -36,7 +36,7 @@ gem 'rest-client'
 # Gem cours images
 gem 'figaro'
 gem 'cloudinary'
-gem 'carrierwave', '~> 0.11.2'
+#gem 'carrierwave', '~> 0.11.2'
 
 
 gem "bootstrap-sass"
