@@ -9,7 +9,7 @@
         <div class="test">
         <div class="card"
         style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path cocktail.photo, height: 169, width: 354, crop: :fill %>')">
+         url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
          <h3><%= cocktail.name %></h3>
          <%= link_to "" , cocktail_path(cocktail), class: "card-link" %>
 
@@ -25,7 +25,7 @@
         <div class="test">
           <div class="card">
             <%= link_to "" , cocktail_path(cocktail), class: "card-link" %>
-            <%= cl_image_tag cocktail.photo, height: 169, width: 354, crop: :fill %>
+            <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill %>
             <h3><%= cocktail.name %></h3>
           </div>
 
