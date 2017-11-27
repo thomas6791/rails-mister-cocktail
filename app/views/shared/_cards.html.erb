@@ -17,6 +17,7 @@
 
         <%= link_to "See details" , cocktail_path(cocktail), class: "index btn btn-success" %>
         <%= link_to "Custom cocktail" , new_cocktail_dose_path(cocktail), class: "index btn btn-info" %>
+
         <%= link_to "delete", cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" }, class: "index btn btn-danger"%>
       </div>
 
